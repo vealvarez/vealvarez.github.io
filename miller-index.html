@@ -1,61 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miller Score Calculator</title>
+    <title>Calculadora de Puntuación de Miller</title>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="miller-styles.css">
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="home-link"><i class="fas fa-arrow-left"></i> Main Menu</a>
-        <h1><i class="fas fa-calculator"></i> Miller Score Calculator</h1>
+        <a href="index.html" class="home-link"><i class="fas fa-arrow-left"></i> Menú Principal</a>
+        <h1><i class="fas fa-calculator"></i> Calculadora de Miller Score</h1>
 
         <form id="millerScoreForm">
             <div class="form-group">
-                <label for="previousHospitalization">Previous Hospitalization in Last 12 Months</label>
+                <label for="previousHospitalization">Hospitalización Anterior en los Últimos 12 Meses</label>
                 <select id="previousHospitalization" required>
-                    <option value="">Select</option>
-                    <option value="yes">Yes</option>
+                    <option value="">Seleccionar</option>
+                    <option value="yes">Sí</option>
                     <option value="no">No</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <label for="recentAntibioticUse">Recent Antibiotic Use</label>
+                <label for="recentAntibioticUse">Uso Reciente de Antibióticos</label>
                 <select id="recentAntibioticUse" required>
-                    <option value="">Select</option>
-                    <option value="yes">Yes</option>
+                    <option value="">Seleccionar</option>
+                    <option value="yes">Sí</option>
                     <option value="no">No</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <label for="centralVenousCatheter">Presence of Central Venous Catheter</label>
+                <label for="centralVenousCatheter">Presencia de Catéter Venoso Central</label>
                 <select id="centralVenousCatheter" required>
-                    <option value="">Select</option>
-                    <option value="yes">Yes</option>
+                    <option value="">Seleccionar</option>
+                    <option value="yes">Sí</option>
                     <option value="no">No</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <label for="patientLocation">Location of Patient</label>
+                <label for="patientLocation">Ubicación del Paciente</label>
                 <select id="patientLocation" required>
-                    <option value="">Select</option>
-                    <option value="icu">ICU</option>
-                    <option value="nonICU">Non-ICU</option>
+                    <option value="">Seleccionar</option>
+                    <option value="icu">UCI</option>
+                    <option value="nonICU">No UCI</option>
                 </select>
             </div>
 
-            <button type="submit">Calculate Miller Score</button>
+            <button type="submit">Calcular Miller Score</button>
         </form>
 
         <div id="resultContainer" class="hidden">
-            <h2>Results</h2>
-            <p>Miller Score: <span id="millerScoreResult"></span></p>
+            <h2>Resultado</h2>
+            <p>Puntuación obtenida: <span id="millerScoreResult"></span></p>
             <p id="riskAssessment"></p>
         </div>
     </div>
