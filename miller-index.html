@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miller Score Calculator</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="miller-styles.css">
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="home-link"><i class="fas fa-arrow-left"></i> Main Menu</a>
+        <h1><i class="fas fa-calculator"></i> Miller Score Calculator</h1>
+
+        <form id="millerScoreForm">
+            <div class="form-group">
+                <label for="previousHospitalization">Previous Hospitalization in Last 12 Months</label>
+                <select id="previousHospitalization" required>
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="recentAntibioticUse">Recent Antibiotic Use</label>
+                <select id="recentAntibioticUse" required>
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="centralVenousCatheter">Presence of Central Venous Catheter</label>
+                <select id="centralVenousCatheter" required>
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="patientLocation">Location of Patient</label>
+                <select id="patientLocation" required>
+                    <option value="">Select</option>
+                    <option value="icu">ICU</option>
+                    <option value="nonICU">Non-ICU</option>
+                </select>
+            </div>
+
+            <button type="submit">Calculate Miller Score</button>
+        </form>
+
+        <div id="resultContainer" class="hidden">
+            <h2>Results</h2>
+            <p>Miller Score: <span id="millerScoreResult"></span></p>
+            <p id="riskAssessment"></p>
+        </div>
+    </div>
+
+    <script src="miller-app.js"></script>
+</body>
+</html>

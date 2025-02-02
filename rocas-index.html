@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocas Score Calculator</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="rocas-styles.css">
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="home-link"><i class="fas fa-arrow-left"></i> Main Menu</a>
+        <h1><i class="fas fa-calculator"></i> Rocas Score Calculator</h1>
+
+        <form id="rocasScoreForm">
+            <div class="form-group">
+                <label for="solidOrganTransplant">Solid Organ Transplant</label>
+                <select id="solidOrganTransplant" required>
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="hematologicMalignancy">Hematologic Malignancy</label>
+                <select id="hematologicMalignancy" required>
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="recentChemotherapy">Chemotherapy in Last 3 Months</label>
+                <select id="recentChemotherapy" required>
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="corticosteroidUse">Corticosteroid Use</label>
+                <select id="corticosteroidUse" required>
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="previousKpcColonization">Previous KPC Colonization</label>
+                <select id="previousKpcColonization" required>
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <button type="submit">Calculate Rocas Score</button>
+        </form>
+
+        <div id="resultContainer" class="hidden">
+            <h2>Results</h2>
+            <p>Rocas Score: <span id="rocasScoreResult"></span></p>
+            <p id="riskAssessment"></p>
+        </div>
+    </div>
+
+    <script src="rocas-app.js"></script>
+</body>
+</html>

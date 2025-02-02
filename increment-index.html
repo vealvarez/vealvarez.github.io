@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increment Score Calculator</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="increment-styles.css">
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="home-link"><i class="fas fa-arrow-left"></i> Main Menu</a>
+        <h1><i class="fas fa-chart-line"></i> Increment Score Calculator</h1>
+
+        <form id="incrementScoreForm">
+            <div class="form-group">
+                <label>Previous Hospitalization</label>
+                <select id="previousHospitalization" required>
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Recent Antibiotic Use</label>
+                <select id="recentAntibioticUse" required>
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Mechanical Ventilation</label>
+                <select id="mechanicalVentilation" required>
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Urinary Catheter</label>
+                <select id="urinaryCatheter" required>
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Previous KPC Colonization</label>
+                <select id="previousKpcColonization" required>
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <button type="submit">Calculate Increment Score</button>
+        </form>
+
+        <div id="resultContainer" class="hidden">
+            <h2>Results</h2>
+            <p>Increment Score: <span id="incrementScoreResult"></span></p>
+            <p id="riskAssessment"></p>
+        </div>
+    </div>
+
+    <script src="increment-app.js"></script>
+</body>
+</html>
