@@ -59,7 +59,7 @@ input {
 }
 
 select {
-    width: 30%; /* Ajusté el ancho del selector */
+    width: 40%; /* Ajusté el ancho del selector */
 }
 
 input:focus, select:focus {
