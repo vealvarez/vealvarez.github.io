@@ -35,13 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Risk assessment
         if (score <= 1) {
-            riskAssessment.textContent = 'Low Risk for KPC Colonization';
+            riskAssessment.textContent = 'Riesgo bajo de infección por KPC';
             riskAssessment.style.color = 'green';
         } else if (score > 1 && score <= 3) {
-            riskAssessment.textContent = 'Moderate Risk for KPC Colonization';
+            riskAssessment.textContent = 'Riesgo moderado de infección por KPC';
             riskAssessment.style.color = 'orange';
         } else {
-            riskAssessment.textContent = 'High Risk for KPC Colonization';
+            riskAssessment.textContent = 'Riesgo alto de infección por KPC';
             riskAssessment.style.color = 'red';
         }
     }

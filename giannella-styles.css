@@ -45,14 +45,23 @@ label {
 }
 
 input, select {
-    width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 6px;
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
     color: #333;
+    display: block;
 }
+
+input {
+    width: 10%; /* Ajustar el ancho de los campos de texto */
+}
+
+select {
+    width: 30%; /* Ajustar el ancho de los selectores */
+}
+
 
 input:focus, select:focus {
     border-color: #0077B6;

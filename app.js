@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
             riskAssessment.textContent = 'Moderate Risk for CR-KP Infection';
             riskAssessment.style.color = 'orange';
         } else {
-            riskAssessment.textContent = 'High Risk for CR-KP Infection';
+            riskAssessment.textContent = 'Riesgo alto de infección por KPC';
             riskAssessment.style.color = 'red';
         }
     }
