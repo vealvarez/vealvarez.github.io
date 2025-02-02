@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KPC Risk Score Calculators</title>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Roboto', sans-serif;
             background-color: #f4f8fb;
             text-align: center;
             margin: 0;
@@ -18,7 +18,7 @@
         }
 
         .container {
-            max-width: 800px; /* Aumentar para pantallas grandes */
+            max-width: 500px;
             margin: auto;
         }
 
@@ -40,20 +40,20 @@
 
         .calculator-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Se adapta al tamaño de la pantalla */
+            grid-template-columns: 1fr;
             gap: 20px;
             margin-top: 20px;
         }
 
         @media (max-width: 500px) {
             .calculator-grid {
-                grid-template-columns: 1fr; /* En pantallas muy pequeñas, 1 columna */
+                grid-template-columns: 1fr;
             }
         }
 
         .calculator-card {
             background-color: #ffffff;
-            padding: 30px; /* Aumentar el padding */
+            padding: 10px 20px;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             text-decoration: none;
@@ -61,9 +61,8 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
-            font-size: 20px; /* Aumentar el tamaño de texto */
+            align-items: flex-start; /* Alinea el contenido a la izquierda */
         }
 
         .calculator-card:hover {
@@ -71,15 +70,17 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
 
-        .calculator-card i {
-            font-size: 40px; /* Aumentar el tamaño del ícono */
-            margin-bottom: 15px;
-            color: #023e8a;
+        .calculator-card span {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 2px; /* Agrega espacio entre el título y la descripción */
         }
 
-        .calculator-card span {
-            font-size: 20px; /* Aumentar el tamaño del texto */
-            font-weight: 500;
+        .calculator-card p {
+            font-size: 14px;
+            color: #555;
+            margin: 2px 0 0 0;
+            text-align: left; /* Alinea el párrafo a la izquierda */
         }
 
         .footer {
@@ -100,37 +101,31 @@
             text-decoration: underline;
         }
 
-        .calculator-card p {
-            font-size: 14px;
-            color: #555;
-            margin-top: 10px;
-            text-align: center;
-        }
+        
     </style>
 </head>
 
 <body>
 
     <div class="container">
-        <h1><i class="fas fa-heartbeat"></i> KPC Risk Score Calculators</h1>
+        <h1>KPC Risk Score Calculators</h1>
 
         <div class="calculator-grid">
             <a href="giannella-index.html" class="calculator-card">
-                <i class="fas fa-notes-medical"></i>
                 <span>Giannella Score</span>
                 <p>Score en pacientes no-inmunosuprimidos colonizados por KPC.</p>
             </a>
             <a href="miller-index.html" class="calculator-card">
-                <i class="fas fa-stethoscope"></i>
                 <span>Miller Score</span>
+                <p>Score cuando se desconoce colonización por KPC.</p>
             </a>
             <a href="rocas-index.html" class="calculator-card">
-                <i class="fas fa-heart"></i>
                 <span>Rocas Score</span>
+                <p>Score en pacientes inmunosuprimidos.</p>
             </a>
             <a href="increment-index.html" class="calculator-card">
-                <i class="fas fa-chart-line"></i>
                 <span>Increment Score</span>
+                <p>Score en pacientes no-inmunosuprimidos colonizados por KPC.</p>
             </a>
         </div>
 
