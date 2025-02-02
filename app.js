@@ -39,10 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Risk assessment
         if (score <= 2) {
-            riskAssessment.textContent = 'Low Risk for CR-KP Infection';
+            riskAssessment.textContent = 'Riesgo bajo de infección por KPC';
             riskAssessment.style.color = 'green';
         } else if (score > 2 && score <= 5) {
-            riskAssessment.textContent = 'Moderate Risk for CR-KP Infection';
+            riskAssessment.textContent = 'Riesgo moderado de infección por KPC';
             riskAssessment.style.color = 'orange';
         } else {
             riskAssessment.textContent = 'Riesgo alto de infección por KPC';
