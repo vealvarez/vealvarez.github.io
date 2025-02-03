@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KPC Risk Score Calculators</title>
+    <title>Calculadoras de Scores</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         html, body {
@@ -73,6 +73,7 @@
             gap: 10px;
             position: relative;
             border-bottom: 1px solid #ddd; /* Añadido borde gris tenue entre los elementos */
+            font-family: 'Roboto', sans-serif; /* Asegura que el botón use la fuente Roboto */
         }
 
         .menu-button::before {
@@ -109,6 +110,7 @@
             font-weight: 500;
             border-bottom: 1px solid #ddd;
             box-sizing: border-box;
+            font-family: 'Roboto', sans-serif; /* Asegura que los enlaces usen la fuente Roboto */
         }
 
         .dropdown a:last-child {
@@ -171,9 +173,9 @@
         </div>
 
         <div class="menu">
-            <button class="menu-button" onclick="toggleMenu('dropdown-kpc')">Riesgo de infecciones por KPC</button>
+            <button class="menu-button" onclick="toggleMenu('dropdown-kpc')">Riesgo de infección por KPC</button>
             <div class="dropdown" id="dropdown-kpc">
-                <a href="giannella-index.html">Giannella Score<span>Puntaje para pacientes no-inmunosuprimidos infectados o colonizados por KPC</span></a>
+                <a href="giannella-index.html">Giannella Score<span>Puntaje para pacientes no-inmunosuprimidos colonizados por KPC</span></a>
                 <a href="miller-index.html">Miller Score<span>Puntaje cuando se desconoce colonización por KPC</span></a>
                 <a href="rocas-index.html">Rocas Score<span>Puntaje para pacientes inmunosuprimidos</span></a>
                 <a href="increment-index.html">Increment Score<span>Puntaje para pacientes no-inmunosuprimidos colonizados por KPC</span></a>
