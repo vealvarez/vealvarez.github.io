@@ -89,14 +89,34 @@ h1 {
     margin-bottom: 35px;
 }
 
+/* Contenedor de los formularios con dos columnas */
 .form-group {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 10px;
     margin-bottom: 15px;
-    border-bottom: 1px solid #dcdcdc;
-    padding-bottom: 10px;
+    border-bottom: 1px solid #dcdcdc; /* Línea fina gris tenue */
+    padding-bottom: 10px; /* Espacio debajo de la línea */
+}
+
+.form-group label {
+    font-weight: 500;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+/* Ajuste para los campos de tipo 'number' (2 dígitos) */
+.form-group input[type="number"] {
+    max-width: 50px; /* Asegura el tamaño de 2 dígitos sin expandirse */
+    text-align: center;
+}
+
+/* Ajuste de los combos (select) para que tengan el mismo tamaño que la palabra 'Seleccionar' */
+.form-group select {
+    max-width: 150px;
+    text-align-last: center;
+    height: 25px; /* La misma altura que los input */
 }
 
 button {
