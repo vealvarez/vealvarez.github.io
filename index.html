@@ -116,22 +116,13 @@
         }
     </style>
     <script>
-        function toggleMenu() {
-            var dropdown = document.getElementById("dropdown-menu");
-            var button = document.getElementById("menu-button");
+        function toggleMenu(id) {
+            var dropdown = document.getElementById(id);
+            var button = dropdown.previousElementSibling;
             var isOpen = dropdown.style.display === "block";
             dropdown.style.display = isOpen ? "none" : "block";
             button.classList.toggle("active", !isOpen);
         }
-        
-        document.addEventListener("click", function(event) {
-            var menu = document.querySelector(".menu");
-            var button = document.getElementById("menu-button");
-            if (!menu.contains(event.target)) {
-                document.getElementById("dropdown-menu").style.display = "none";
-                button.classList.remove("active");
-            }
-        });
     </script>
 </head>
 
@@ -139,12 +130,26 @@
     <h1>Predicción de Riesgo de Infección por KPC</h1>
     
     <div class="menu">
-        <button class="menu-button" id="menu-button" onclick="toggleMenu()">Infecciones KPC</button>
-        <div class="dropdown" id="dropdown-menu">
+        <button class="menu-button" onclick="toggleMenu('dropdown-kpc')">Infecciones KPC</button>
+        <div class="dropdown" id="dropdown-kpc">
             <a href="giannella-index.html">Giannella Score<span>Puntaje para pacientes no-inmunosuprimidos infectados o colonizados por KPC</span></a>
             <a href="miller-index.html">Miller Score<span>Puntaje cuando se desconoce colonización por KPC</span></a>
             <a href="rocas-index.html">Rocas Score<span>Puntaje para pacientes inmunosuprimidos</span></a>
             <a href="increment-index.html">Increment Score<span>Puntaje para pacientes no-inmunosuprimidos colonizados por KPC</span></a>
+        </div>
+
+        <button class="menu-button" onclick="toggleMenu('dropdown-calc2')">Calculadora 2</button>
+        <div class="dropdown" id="dropdown-calc2">
+            <a href="#">Score 1</a>
+            <a href="#">Score 2</a>
+            <a href="#">Score 3</a>
+        </div>
+
+        <button class="menu-button" onclick="toggleMenu('dropdown-calc3')">Calculadora 3</button>
+        <div class="dropdown" id="dropdown-calc3">
+            <a href="#">Score 1</a>
+            <a href="#">Score 2</a>
+            <a href="#">Score 3</a>
         </div>
     </div>
 
