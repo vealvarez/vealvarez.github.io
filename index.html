@@ -41,6 +41,7 @@
         h1 {
             margin: 0;
             font-size: 24px;
+            margin-left: 15px; /* Ajuste el margen izquierdo a 35px para que esté alineado con los triángulos del menú */
         }
 
         .menu {
@@ -63,14 +64,15 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 20px;
+            font-size: 18px;
             width: 100%;
             text-align: left;
-            padding-left: 35px;
+            padding-left: 35px; /* Espaciado de los triángulos */
             display: flex;
             align-items: center;
             gap: 10px;
             position: relative;
+            border-bottom: 1px solid #ddd; /* Añadido borde gris tenue entre los elementos */
         }
 
         .menu-button::before {
@@ -165,11 +167,11 @@
 <body>
     <div class="content">
         <div class="header">
-            <h1>Predicción de Riesgo de Infección por KPC</h1>
+            <h1>Calculadoras de Scores</h1>
         </div>
 
         <div class="menu">
-            <button class="menu-button" onclick="toggleMenu('dropdown-kpc')">Infecciones KPC</button>
+            <button class="menu-button" onclick="toggleMenu('dropdown-kpc')">Riesgo de infecciones por KPC</button>
             <div class="dropdown" id="dropdown-kpc">
                 <a href="giannella-index.html">Giannella Score<span>Puntaje para pacientes no-inmunosuprimidos infectados o colonizados por KPC</span></a>
                 <a href="miller-index.html">Miller Score<span>Puntaje cuando se desconoce colonización por KPC</span></a>
