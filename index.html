@@ -7,13 +7,40 @@
     <title>KPC Risk Score Calculators</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-family: 'Roboto', sans-serif;
             background-color: white;
             color: #2c3e50;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .header {
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+            padding: 20px 0;
+        }
+
+        h1 {
             margin: 0;
-            padding: 20px;
-            text-align: center;
+            font-size: 24px;
         }
 
         .menu {
@@ -26,7 +53,7 @@
             background-color: white;
             border-radius: 5px;
             margin-left: auto;
-            margin-right: auto; /* Esto centra el menú horizontalmente */
+            margin-right: auto;
         }
 
         .menu-button {
@@ -102,6 +129,14 @@
             background-color: #f1f1f1;
         }
 
+        .footer {
+            font-size: 14px;
+            color: #666;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: auto;
+        }
+
         @media (max-width: 500px) {
             .menu {
                 width: 100%;
@@ -128,33 +163,37 @@
 </head>
 
 <body>
-    <h1>Predicción de Riesgo de Infección por KPC</h1>
-    
-    <div class="menu">
-        <button class="menu-button" onclick="toggleMenu('dropdown-kpc')">Infecciones KPC</button>
-        <div class="dropdown" id="dropdown-kpc">
-            <a href="giannella-index.html">Giannella Score<span>Puntaje para pacientes no-inmunosuprimidos infectados o colonizados por KPC</span></a>
-            <a href="miller-index.html">Miller Score<span>Puntaje cuando se desconoce colonización por KPC</span></a>
-            <a href="rocas-index.html">Rocas Score<span>Puntaje para pacientes inmunosuprimidos</span></a>
-            <a href="increment-index.html">Increment Score<span>Puntaje para pacientes no-inmunosuprimidos colonizados por KPC</span></a>
+    <div class="content">
+        <div class="header">
+            <h1>Predicción de Riesgo de Infección por KPC</h1>
         </div>
 
-        <button class="menu-button" onclick="toggleMenu('dropdown-calc2')">Calculadora 2</button>
-        <div class="dropdown" id="dropdown-calc2">
-            <a href="#">Score 1</a>
-            <a href="#">Score 2</a>
-            <a href="#">Score 3</a>
-        </div>
+        <div class="menu">
+            <button class="menu-button" onclick="toggleMenu('dropdown-kpc')">Infecciones KPC</button>
+            <div class="dropdown" id="dropdown-kpc">
+                <a href="giannella-index.html">Giannella Score<span>Puntaje para pacientes no-inmunosuprimidos infectados o colonizados por KPC</span></a>
+                <a href="miller-index.html">Miller Score<span>Puntaje cuando se desconoce colonización por KPC</span></a>
+                <a href="rocas-index.html">Rocas Score<span>Puntaje para pacientes inmunosuprimidos</span></a>
+                <a href="increment-index.html">Increment Score<span>Puntaje para pacientes no-inmunosuprimidos colonizados por KPC</span></a>
+            </div>
 
-        <button class="menu-button" onclick="toggleMenu('dropdown-calc3')">Calculadora 3</button>
-        <div class="dropdown" id="dropdown-calc3">
-            <a href="#">Score 1</a>
-            <a href="#">Score 2</a>
-            <a href="#">Score 3</a>
+            <button class="menu-button" onclick="toggleMenu('dropdown-calc2')">Calculadora 2</button>
+            <div class="dropdown" id="dropdown-calc2">
+                <a href="#">Score 1</a>
+                <a href="#">Score 2</a>
+                <a href="#">Score 3</a>
+            </div>
+
+            <button class="menu-button" onclick="toggleMenu('dropdown-calc3')">Calculadora 3</button>
+            <div class="dropdown" id="dropdown-calc3">
+                <a href="#">Score 1</a>
+                <a href="#">Score 2</a>
+                <a href="#">Score 3</a>
+            </div>
         </div>
     </div>
 
-    <div class="footer" style="margin-top: 30px; font-size: 14px; color: #666;">
+    <div class="footer">
         © 2025 Equaiar
     </div>
 </body>
