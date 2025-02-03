@@ -50,13 +50,31 @@ h1 {
     text-align: left;
 }
 
+/* Estilo para el párrafo con fondo gris claro */
+.info-box {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Estilo para la frase debajo del párrafo */
+.note {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 35px;
+}
+
 /* Contenedor de los formularios con dos columnas */
 .form-group {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas: etiquetas y campos */
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 10px;
     margin-bottom: 15px;
+    border-bottom: 1px solid #dcdcdc; /* Línea fina gris tenue */
+    padding-bottom: 10px; /* Espacio debajo de la línea */
 }
 
 .form-group label {
