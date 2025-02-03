@@ -2,7 +2,7 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: white;
 }
 
 .container {
@@ -50,19 +50,19 @@ h1 {
     text-align: left;
 }
 
-/* Contenedor de los formularios y etiquetas alineados correctamente */
+/* Contenedor de los formularios con dos columnas */
 .form-group {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas: etiquetas y campos */
     align-items: center;
-    justify-content: space-between; /* Hace que los campos y las etiquetas estén en los extremos */
+    gap: 10px;
     margin-bottom: 15px;
-    width: 100%;
 }
 
 .form-group label {
     font-weight: 500;
     text-align: left;
-    min-width: 250px; /* Asegura que las etiquetas no sean demasiado grandes */
+    word-wrap: break-word;
 }
 
 /* Ajuste para los campos de tipo 'number' (2 dígitos) */
@@ -73,24 +73,16 @@ h1 {
 
 /* Ajuste de los combos (select) para que tengan el mismo tamaño que la palabra 'Seleccionar' */
 .form-group select {
-    min-width: auto;
     max-width: 150px;
     text-align-last: center;
 }
 
-/* Para pantallas pequeñas */
+/* Asegurar que en pantallas pequeñas se mantengan dos columnas */
 @media (max-width: 768px) {
     .form-group {
-        flex-direction: column; /* Para que en pantallas pequeñas se apilen */
-        align-items: flex-start;
-    }
-
-    .input-container {
-        justify-content: left; /* Asegura que el campo de edad y "años" no se desplacen */
-    }
-
-    .input-container input {
-        max-width: 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Mantiene dos columnas en móviles */
+        gap: 5px;
     }
 }
 
