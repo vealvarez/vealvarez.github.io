@@ -8,17 +8,43 @@ body {
 .container {
     padding: 20px;
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 600px; /* Limita el ancho de todo */
 }
 
+/* Aseguramos que el fondo azul solo ocupe el contenedor */
+.header-container {
+    background-color: #0077B6;
+    color: white;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px; /* Para estética */
+    width: 100%;
+}
+
+/* Texto y enlace dentro del encabezado */
+.header-container h1, 
+.header-container .home-link {
+    color: white;
+    margin: 0;
+}
+
+.header-container .home-link {
+    text-decoration: none;
+    font-size: 16px;
+    align-self: flex-start;
+}
+
+/* Resto de los estilos */
 .input-container {
     display: flex;
     align-items: center;
-    gap: 5px; /* Espacio entre el campo de entrada y "años" */
+    gap: 5px;
 }
 
 .input-container input {
-    max-width: 50px; /* Asegura que el campo no se agrande más de 2 dígitos */
+    max-width: 50px;
     text-align: center;
 }
 
@@ -37,10 +63,6 @@ body {
     margin-bottom: 20px;
 }
 
-.home-link i {
-    font-size: 15px;
-}
-
 h1 {
     font-size: 24px;
     font-weight: 600;
@@ -50,7 +72,6 @@ h1 {
     text-align: left;
 }
 
-/* Estilo para el párrafo con fondo gris claro */
 .info-box {
     background-color: #f0f0f0;
     padding: 10px;
@@ -58,7 +79,6 @@ h1 {
     margin-bottom: 10px;
 }
 
-/* Estilo para la frase debajo del párrafo */
 .note {
     font-size: 14px;
     font-weight: bold;
@@ -66,45 +86,16 @@ h1 {
     margin-bottom: 35px;
 }
 
-/* Contenedor de los formularios con dos columnas */
 .form-group {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 10px;
     margin-bottom: 15px;
-    border-bottom: 1px solid #dcdcdc; /* Línea fina gris tenue */
-    padding-bottom: 10px; /* Espacio debajo de la línea */
+    border-bottom: 1px solid #dcdcdc;
+    padding-bottom: 10px;
 }
 
-.form-group label {
-    font-weight: 500;
-    text-align: left;
-    word-wrap: break-word;
-}
-
-/* Ajuste para los campos de tipo 'number' (2 dígitos) */
-.form-group input[type="number"] {
-    max-width: 50px; /* Asegura el tamaño de 2 dígitos sin expandirse */
-    text-align: center;
-}
-
-/* Ajuste de los combos (select) para que tengan el mismo tamaño que la palabra 'Seleccionar' */
-.form-group select {
-    max-width: 150px;
-    text-align-last: center;
-}
-
-/* Asegurar que en pantallas pequeñas se mantengan dos columnas */
-@media (max-width: 768px) {
-    .form-group {
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* Mantiene dos columnas en móviles */
-        gap: 5px;
-    }
-}
-
-/* Estilo para los botones */
 button {
     width: 100%;
     padding: 12px;

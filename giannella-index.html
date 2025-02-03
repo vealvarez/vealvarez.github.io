@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giannella Score</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="giannella-styles.css">
 </head>
+
 <body>
-    <div class="container">
-        <a href="index.html" class="home-link"><i class="fas fa-arrow-left"></i>Menú</a>
-        <h1>Giannella Score</h1>
+    <div class="container"> <!-- Mueve todo a container para asegurar el ancho adecuado -->
+        <div class="header-container">
+            <a href="index.html" class="home-link"><i class="fas fa-arrow-left"></i>Menú</a>
+            <h1>Giannella Score</h1>
+        </div>
+    
         <p class="info-box">Calcula el riesgo de infección para pacientes no-inmunosuprimidos colonizados por KPC</p>
         <p class="note">Responda todas las preguntas</p>
+    
         <form id="gianellaScoreForm">
             <div class="form-group">
                 <label for="age">Edad</label>
@@ -60,12 +65,13 @@
         </form>
 
         <div id="resultContainer" class="hidden">
-            <h2>Resultado</h2>
-            <p>Puntuación obtenida: <span id="gianellaScoreResult"></span></p>
+            <h3>Resultado</h3>
+            <p><strong>Puntuación obtenida: </strong><span id="gianellaScoreResult"></span></p>
             <p id="riskAssessment"></p>
         </div>
     </div>
 
-    <script src="app.js"></script>
+    <script src="giannella-app.js"></script>
 </body>
+
 </html>
