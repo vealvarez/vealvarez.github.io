@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Puntuación de Miller</title>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>Miller Score</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="miller-styles.css">
 </head>
+
 <body>
     <div class="container">
-        <a href="index.html" class="home-link"><i class="fas fa-arrow-left"></i> Menú </a>
-        <h1><i class="fas fa-calculator"></i> Calculadora de Miller Score</h1>
+        <div class="header-container">
+            <a href="index.html" class="home-link"><i class="fas fa-arrow-left"></i> Menú </a>
+            <h1>Miller Score</h1>
+        </div>
+
+        <p class="info-box">Calcula el riesgo de infección cuando se desconoce colonización por KPC</p>
+        <p class="note">Responda todas las preguntas</p>
 
         <form id="millerScoreForm">
             <div class="form-group">
@@ -54,7 +61,7 @@
         </form>
 
         <div id="resultContainer" class="hidden">
-            <h2>Resultado</h2>
+            <h3>Resultado</h3>
             <p>Puntuación obtenida: <span id="millerScoreResult"></span></p>
             <p id="riskAssessment"></p>
         </div>
@@ -62,4 +69,5 @@
 
     <script src="miller-app.js"></script>
 </body>
+
 </html>
