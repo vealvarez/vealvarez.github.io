@@ -19,8 +19,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 10px; /* Para estética */
+    border-radius: 10px;
     width: 100%;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    max-width: 600px; /* Asegura que el encabezado no sea más ancho que el contenedor */
+    margin: 0 auto; /* Centra el encabezado */
 }
 
 /* Texto y enlace dentro del encabezado */
