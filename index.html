@@ -65,7 +65,7 @@
             border-radius: 5px;
             z-index: 1;
             text-align: left;
-            padding: 10px;
+            padding: 0;
         }
 
         .dropdown a {
@@ -77,6 +77,12 @@
             text-align: left;
             width: 100%;
             font-weight: 500;
+            border-bottom: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+
+        .dropdown a:last-child {
+            border-bottom: none;
         }
 
         .dropdown a span {
