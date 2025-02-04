@@ -47,23 +47,21 @@
 
         }
 
-        /* Aseguramos que el fondo azul solo ocupe el contenedor */
         .header-container {
             background-color: #0077B6;
-            /* Azul */
             color: white;
             padding: 15px;
             display: flex;
             flex-direction: column;
             align-items: center;
             border-radius: 10px;
-            width: 100%;
-            box-sizing: border-box;
+            width: 90%;
+            /* En lugar de 100%, para evitar que se desborde */
             max-width: 550px;
-            /* Evita que el ancho se extienda más allá del contenido */
+            box-sizing: border-box;
             margin: 0 auto;
-            /* Centra el encabezado */
         }
+
 
         /* Ajustamos el h1 dentro del contenedor */
         .header-container h1 {
@@ -213,7 +211,8 @@
         </div>
 
         <div class="menu">
-            <button class="menu-button" onclick="toggleMenu('dropdown-kpc')">Riesgo de infección por KPC</button>
+            <button class="menu-button" onclick="toggleMenu('dropdown-kpc')">Riesgo pacientes colonizados por
+                KPC</button>
             <div class="dropdown" id="dropdown-kpc">
                 <a href="giannella-index.html">Giannella Score<span>Predice riesgo de bacteriemia en pacientes
                         no-inmunosuprimidos colonizados por KPC</span></a>
